@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Beast Mode X</title>
+<style>
+body{
+background:#0f0f0f;
+color:white;
+font-family:Arial;
+text-align:center;
+}
+h1{
+color:#00ff88;
+}
+button{
+background:#00ff88;
+border:none;
+padding:15px 25px;
+font-size:18px;
+margin:10px;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>BEAST MODE X</h1>
+
+<h2 id="xp">XP: 0</h2>
+<h3 id="level">Level: 1</h3>
+
+<button onclick="gainXP()">Complete Mission</button>
+
+<script>
+let xp = 0;
+let level = 1;
+
+function gainXP(){
+xp += 10;
+document.getElementById("xp").innerText = "XP: " + xp;
+
+if(xp >= level * 100){
+level++;
+document.getElementById("level").innerText = "Level: " + level;
+alert("LEVEL UP 🔥");
+}
+}
+</script>
+
+</body>
+</html>
